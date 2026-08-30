@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "project": {
+    "id": "REPLACE_ME",
+    "title": "REPLACE_ME",
+    "protected_branch": "main",
+    "status": "SETUP"
+  },
+  "updated_at": "YYYY-MM-DD",
+  "frozen_target": {
+    "version": "v1",
+    "path": "contracts/frozen-target.md",
+    "status": "DRAFT",
+    "source_commit": "REPLACE_ME"
+  },
+  "verification_policy": {
+    "route_level_required": 1,
+    "project_level_required": 2,
+    "author_may_verify_own_candidate": false,
+    "accepted_isolation_levels": [
+      "STRICT_FRESH",
+      "CONTEXT_ISOLATED"
+    ]
+  },
+  "top_level_claim": {
+    "truth_status": "UNRESOLVED",
+    "review_status": "NOT_REVIEWED",
+    "verification_status": "NOT_VERIFIED",
+    "computation_status": "NOT_RUN",
+    "formalization_status": "NOT_FORMALIZED",
+    "novelty_status": "NOT_ASSESSED",
+    "evidence": []
+  },
+  "routes": [],
+  "accepted_results": [],
+  "open_blockers": [],
+  "next_action": "Complete template setup and freeze the first work unit."
+}

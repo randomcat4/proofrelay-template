@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/proofrelay/receipt.schema.json",
+  "title": "ProofRelay execution receipt",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "work_unit",
+    "actor",
+    "role",
+    "command",
+    "exit_code",
+    "inputs_sha256",
+    "outputs_sha256"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "role": {"enum": ["AUTHOR", "VERIFIER", "COMPUTE_WORKER", "MAINTAINER"]},
+    "exit_code": {"type": "integer"},
+    "inputs_sha256": {"type": "object"},
+    "outputs_sha256": {"type": "object"}
+  },
+  "additionalProperties": true
+}

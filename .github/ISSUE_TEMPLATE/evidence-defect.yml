@@ -1,0 +1,37 @@
+name: Evidence defect / 证据缺陷
+description: Report a reproducibility, receipt, denominator, hash, or implementation defect. / 报告复现、收据、分母、哈希或实现缺陷。
+title: "[EVIDENCE] "
+labels: ["type:evidence-defect"]
+body:
+  - type: input
+    id: artifact
+    attributes:
+      label: Artifact and full commit / 工件与完整 commit
+    validations:
+      required: true
+  - type: textarea
+    id: defect
+    attributes:
+      label: Exact defect / 精确缺陷
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction / 最小复现
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Claim impact / 对主张的影响
+      description: Distinguish probe, certificate, partial result, and top-level target. / 区分探针、证书、部分结果和顶层目标。
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy / 隐私
+      options:
+        - label: The report contains no secret or live infrastructure detail. / 报告不含秘密或实时基础设施细节。
+          required: true

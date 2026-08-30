@@ -1,0 +1,90 @@
+name: Frozen work unit / 冻结工作单元
+description: Freeze and assign one bounded route, proof, analysis, or implementation task. / 冻结并分配一项有边界的路线、证明、分析或实现任务。
+title: "[WORK] "
+labels: ["type:work-unit", "status:start-pending"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        GitHub is the authoritative assignment. Chat delivery alone is not start evidence.
+        GitHub 是正式任务面；仅在聊天中发送不算启动证据。
+  - type: input
+    id: work_unit
+    attributes:
+      label: Work-unit ID / 工作单元 ID
+      placeholder: R01-A01
+    validations:
+      required: true
+  - type: input
+    id: base_commit
+    attributes:
+      label: Full base commit / 完整基准 commit
+      placeholder: 40-character SHA
+    validations:
+      required: true
+  - type: input
+    id: target_version
+    attributes:
+      label: Frozen target version / 冻结目标版本
+      placeholder: v1
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Exact scope and non-goals / 精确范围与非目标
+      description: Preserve every quantifier, boundary, and acceptance criterion. / 保留全部量词、边界和验收标准。
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Permitted inputs and forbidden context / 允许输入与禁止上下文
+    validations:
+      required: true
+  - type: textarea
+    id: ownership
+    attributes:
+      label: Deliverables and directory ownership / 交付物与目录所有权
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: Success and partial-success gates / 成功与部分成功门
+    validations:
+      required: true
+  - type: textarea
+    id: falsification
+    attributes:
+      label: Fastest falsification test and hazards / 最快证伪测试与风险
+    validations:
+      required: true
+  - type: textarea
+    id: stop
+    attributes:
+      label: Budget and stop conditions / 预算与停止条件
+    validations:
+      required: true
+  - type: dropdown
+    id: isolation
+    attributes:
+      label: Required isolation / 所需隔离等级
+      options:
+        - STRICT_FRESH
+        - CONTEXT_ISOLATED
+        - CROSS_LANE
+        - NOT_INDEPENDENT
+    validations:
+      required: true
+  - type: checkboxes
+    id: contract
+    attributes:
+      label: Contract / 契约
+      options:
+        - label: The complete work will be committed, not left only in chat or comments. / 完整成果会提交到仓库，不会只留在聊天或评论中。
+          required: true
+        - label: The worker will use a dedicated branch and will not edit accepted state. / 工作者使用专用分支且不修改接受状态账。
+          required: true
+        - label: Credentials and live infrastructure details will not be committed. / 不提交凭据和实时基础设施信息。
+          required: true

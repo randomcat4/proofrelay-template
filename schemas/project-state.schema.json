@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/proofrelay/project-state.schema.json",
+  "title": "ProofRelay project state",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project",
+    "frozen_target",
+    "verification_policy",
+    "top_level_claim",
+    "routes",
+    "accepted_results"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "project": {
+      "type": "object",
+      "required": ["id", "title", "protected_branch", "status"]
+    },
+    "frozen_target": {
+      "type": "object",
+      "required": ["version", "path", "status", "source_commit"]
+    },
+    "verification_policy": {
+      "type": "object",
+      "required": [
+        "route_level_required",
+        "project_level_required",
+        "author_may_verify_own_candidate",
+        "accepted_isolation_levels"
+      ]
+    },
+    "top_level_claim": {"type": "object"},
+    "routes": {"type": "array"},
+    "accepted_results": {"type": "array"}
+  },
+  "additionalProperties": true
+}

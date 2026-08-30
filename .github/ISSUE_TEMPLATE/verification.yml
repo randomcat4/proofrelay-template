@@ -1,0 +1,61 @@
+name: Independent verification / 独立验证
+description: Audit one immutable candidate without authoring or repairing it. / 审计一个不可变候选，不参与创作或修补。
+title: "[VERIFY] "
+labels: ["type:verification", "needs:verification"]
+body:
+  - type: input
+    id: work_unit
+    attributes:
+      label: Work-unit ID / 工作单元 ID
+    validations:
+      required: true
+  - type: input
+    id: candidate_commit
+    attributes:
+      label: Full candidate commit / 完整候选 commit
+      placeholder: 40-character SHA
+    validations:
+      required: true
+  - type: textarea
+    id: bundle
+    attributes:
+      label: Frozen bundle / 冻结验证包
+      description: Link only the target, candidate, accepted prerequisites, and public sources. / 只链接目标、候选、已接受前提和公开来源。
+    validations:
+      required: true
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Adversarial checklist / 对抗检查表
+      description: Include semantics, boundaries, citations, computation coverage, and reproduction. / 包含语义、边界、引用、计算覆盖和复现。
+    validations:
+      required: true
+  - type: dropdown
+    id: isolation
+    attributes:
+      label: Declared isolation / 声明隔离等级
+      options:
+        - STRICT_FRESH
+        - CONTEXT_ISOLATED
+        - CROSS_LANE
+        - NOT_INDEPENDENT
+        - UNKNOWN
+    validations:
+      required: true
+  - type: textarea
+    id: prior_context
+    attributes:
+      label: Prior-context disclosure / 既有上下文披露
+    validations:
+      required: true
+  - type: checkboxes
+    id: independence
+    attributes:
+      label: Independence / 独立性
+      options:
+        - label: I did not author this candidate. / 我不是该候选作者。
+          required: true
+        - label: I will report only CORRECT, INCORRECT, or INCONCLUSIVE with exact scope. / 我只会按精确范围给出 CORRECT、INCORRECT 或 INCONCLUSIVE。
+          required: true
+        - label: I will not repair the candidate in the artifact I certify. / 我不会在正在认证的工件里修补候选。
+          required: true

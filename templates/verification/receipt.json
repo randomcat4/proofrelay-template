@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "work_unit": "REPLACE_ME",
+  "actor": "REPLACE_ME",
+  "role": "VERIFIER",
+  "candidate_commit": "FULL_SHA",
+  "verification_commit": "FULL_SHA",
+  "isolation": "UNKNOWN",
+  "prior_context_disclosure": "REPLACE_ME",
+  "command": "REPLACE_ME",
+  "exit_code": 0,
+  "inputs_sha256": {},
+  "outputs_sha256": {},
+  "verdict": "INCONCLUSIVE"
+}

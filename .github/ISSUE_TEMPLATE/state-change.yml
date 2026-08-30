@@ -1,0 +1,45 @@
+name: Accepted-state change / 接受状态变更
+description: Propose an atomic machine-and-human ledger update after all gates pass. / 所有门通过后，建议原子更新机器与人读状态账。
+title: "[STATE] "
+labels: ["type:state-change"]
+body:
+  - type: input
+    id: result
+    attributes:
+      label: Result ID and exact scope / 结果 ID 与精确范围
+    validations:
+      required: true
+  - type: input
+    id: candidate
+    attributes:
+      label: Candidate PR and full commit / 候选 PR 与完整 commit
+    validations:
+      required: true
+  - type: textarea
+    id: audit
+    attributes:
+      label: Main-audit evidence / 主审证据
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Qualifying verification PRs / 合格验证 PR
+    validations:
+      required: true
+  - type: textarea
+    id: axes
+    attributes:
+      label: Independent status axes / 独立状态轴
+      description: Truth, review, verification, computation, formalization, novelty. / 真值、审查、验证、计算、形式化、新颖性。
+    validations:
+      required: true
+  - type: checkboxes
+    id: atomic
+    attributes:
+      label: Atomic update / 原子更新
+      options:
+        - label: The PR will update PROJECT_STATE.json and both human ledgers together. / PR 会同时更新 PROJECT_STATE.json 和两份人读状态账。
+          required: true
+        - label: The candidate author is not self-certifying acceptance. / 候选作者没有自行认证接受状态。
+          required: true

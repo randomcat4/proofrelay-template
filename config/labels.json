@@ -1,0 +1,15 @@
+{
+  "labels": [
+    {"name": "type:work-unit", "color": "1d76db", "description": "Frozen bounded work unit"},
+    {"name": "type:verification", "color": "5319e7", "description": "Independent verification"},
+    {"name": "type:evidence-defect", "color": "d73a4a", "description": "Reproducibility or evidence defect"},
+    {"name": "type:state-change", "color": "0e8a16", "description": "Accepted-state update"},
+    {"name": "status:start-pending", "color": "fbca04", "description": "Dispatched without durable start evidence"},
+    {"name": "status:claimed", "color": "c2e0c6", "description": "Durably claimed with a dedicated lane"},
+    {"name": "status:candidate", "color": "bfdadc", "description": "Candidate submitted; not accepted"},
+    {"name": "status:blocked", "color": "b60205", "description": "Precise blocker recorded"},
+    {"name": "needs:main-audit", "color": "f9d0c4", "description": "Requires maintainer audit"},
+    {"name": "needs:verification", "color": "d4c5f9", "description": "Requires independent verification"},
+    {"name": "accepted:partial", "color": "0e8a16", "description": "Accepted strict partial result"}
+  ]
+}

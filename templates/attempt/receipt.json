@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "work_unit": "REPLACE_ME",
+  "actor": "REPLACE_ME",
+  "role": "AUTHOR",
+  "base_commit": "FULL_SHA",
+  "candidate_commit": "FULL_SHA",
+  "worktree_clean": true,
+  "command": "REPLACE_ME",
+  "started_at_utc": "YYYY-MM-DDTHH:MM:SSZ",
+  "finished_at_utc": "YYYY-MM-DDTHH:MM:SSZ",
+  "exit_code": 0,
+  "environment": {
+    "os": "SANITIZED_GENERAL_DESCRIPTION",
+    "python": "NOT_USED",
+    "other_tools": []
+  },
+  "search_denominator": {
+    "theoretical_total": 0,
+    "executed_total": 0,
+    "pruning_justification": "NOT_APPLICABLE",
+    "coverage_status": "NOT_APPLICABLE"
+  },
+  "randomness": {
+    "deterministic": true,
+    "seed": null
+  },
+  "peak_memory_bytes": null,
+  "inputs_sha256": {},
+  "outputs_sha256": {},
+  "formalization": {
+    "status": "NOT_FORMALIZED",
+    "toolchain": "NOT_APPLICABLE",
+    "build_command": "NOT_APPLICABLE",
+    "axiom_report": "NOT_APPLICABLE"
+  },
+  "provenance_notes": "REPLACE_ME"
+}

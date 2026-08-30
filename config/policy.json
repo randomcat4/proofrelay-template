@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "protected_paths": [
+    "contracts/",
+    "state/",
+    ".github/"
+  ],
+  "forbidden_suffixes": [
+    ".pem",
+    ".pfx",
+    ".key"
+  ],
+  "forbidden_filenames": [
+    ".env",
+    "known_hosts",
+    "id_rsa",
+    "id_ed25519"
+  ],
+  "allowed_result_statuses": [
+    "PROVED",
+    "DISPROVED",
+    "PARTIAL",
+    "INCOMPLETE",
+    "BLOCKED",
+    "NO_HIT_NOT_A_PROOF"
+  ],
+  "allowed_verdicts": [
+    "CORRECT",
+    "INCORRECT",
+    "INCONCLUSIVE"
+  ]
+}

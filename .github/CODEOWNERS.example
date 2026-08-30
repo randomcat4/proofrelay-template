@@ -1,0 +1,7 @@
+# Rename this file to CODEOWNERS after replacing the handles.
+# Protect the target, state ledgers, workflow, and governance contracts.
+
+/contracts/ @REPLACE_ME
+/state/ @REPLACE_ME
+/.github/ @REPLACE_ME
+/scripts/validate_repo.py @REPLACE_ME

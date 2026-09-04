@@ -67,6 +67,7 @@ The repository has no runtime dependencies beyond Python's standard library. CI 
 | `evidence/` | Reproducible scripts, outputs, and exact certificates |
 | `manifests/` | Artifact hashes and preservation metadata |
 | `templates/` | Copyable work-unit, attempt, and verification contracts |
+| `skills/` | Installable agent skills with installation guide |
 | `.github/` | Bilingual Issue forms, PR checklist, and CI |
 | `scripts/` | Scaffolding, validation, manifest, and label helpers |
 
@@ -79,6 +80,7 @@ The repository has no runtime dependencies beyond Python's standard library. CI 
 - [Evidence and compute receipts](docs/evidence.md)
 - [Governance and authority](docs/governance.md)
 - [Why the gates exist](docs/design-rationale.md)
+- [Agent skills installation guide](skills/README.md)
 
 ## Scope and limits
 

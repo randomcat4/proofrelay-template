@@ -1,0 +1,33 @@
+# 候选账
+
+先记录候选，再运行探针。不得只保留成功项。
+
+## 分母
+
+- 收集候选总数：{{TOTAL}}
+- 已用工作单元：{{WORK_UNITS}}
+- VERIFIED_OPEN：{{N_OPEN}}
+- STATUS_UNCERTAIN：{{N_UNCERTAIN}}
+- SOLVED_OR_OCCUPIED：{{N_SOLVED}}
+- MALFORMED：{{N_MALFORMED}}
+- REJECTED / HOLD / SCOUT / DEEP：{{PIPELINE_COUNTS}}
+
+## CAND-{{ID}}：{{TITLE}}
+
+- 原始来源：{{PRIMARY_SOURCE}}
+- 状态与核验日期：{{STATUS_AND_DATE}}
+- 精确陈述：{{STATEMENT}}
+- 意图契约：{{INTENDED_MEANING_AND_FORBIDDEN_TRIVIAL_READINGS}}
+- 事前价值：{{PRECOMMITTED_INTEREST_AND_LEVEL}}
+- 已知人类尝试与难度证据：{{HUMAN_ATTEMPTS_AND_DIFFICULTY_EVIDENCE}}
+- 已知最强相邻结果：{{ADJACENT_RESULTS}}
+- 真正剩余义务：{{RESIDUAL_OBLIGATION}}
+- 最快证伪测试：{{FALSIFICATION_TEST}}
+- 最终验证器：{{VERIFIER}}
+- 正向评分：{{POSITIVE_SCORES_0_TO_2}}
+- 风险扣分：{{RISK_SCORES_0_TO_2}}
+- 等价/循环依赖检查：{{DEPENDENCY_AUDIT}}
+- 产出证据：{{EVIDENCE}}
+- 语义忠实性审计：{{SEMANTIC_FIDELITY_AUDIT}}
+- 当前状态：REJECTED / HOLD / SCOUT / DEEP
+- 决定与理由：{{DECISION}}

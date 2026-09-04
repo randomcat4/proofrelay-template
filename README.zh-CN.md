@@ -65,6 +65,7 @@ flowchart LR
 | `evidence/` | 可复现程序、输出和精确证书 |
 | `manifests/` | 工件哈希与保全元数据 |
 | `templates/` | 可复制的工作单元、尝试和验证契约 |
+| `skills/` | 可安装的 agent skill 及安装说明 |
 | `.github/` | 双语 Issue 表单、PR 检查表和 CI |
 | `scripts/` | 脚手架、校验、清单和标签工具 |
 
@@ -77,6 +78,7 @@ flowchart LR
 - [证据与计算收据](docs/evidence.zh-CN.md)
 - [治理与权限](docs/governance.zh-CN.md)
 - [这些门为何存在](docs/design-rationale.zh-CN.md)
+- [Agent skill 安装说明](skills/README.zh-CN.md)
 
 ## 能力边界
 

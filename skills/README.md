@@ -2,7 +2,7 @@
 
 [简体中文](README.zh-CN.md)
 
-This directory ships installable [Agent Skills](https://github.com/anthropics/skills) that pair with the ProofRelay protocol. Each skill is a self-contained directory with a `SKILL.md` entry point; no runtime dependencies are added to the repository itself.
+This directory ships installable [Agent Skills](https://github.com/anthropics/skills). Each skill is a self-contained directory with a `SKILL.md` entry point and works standalone; pairing with the ProofRelay protocol is an opt-in, not a default. No runtime dependencies are added to the repository itself.
 
 ## Bundled skills
 
@@ -10,7 +10,16 @@ This directory ships installable [Agent Skills](https://github.com/anthropics/sk
 |---|---|
 | [`math-theorem/`](math-theorem/SKILL.md) | Research-grade theorem discovery, proving, refutation, minimal-assumption repair, and novelty certification. Enforces frozen statements, isolated proof instances, fresh-context verification, prior-art auditing, and separate verdicts for truth, proof completeness, and novelty. |
 
-`math-theorem` is deliberately aligned with ProofRelay: its run artifacts (frozen theorem, route registry, lemma ledger, provenance, verdict) map onto this repository's `contracts/`, `routes/`, `attempts/`, `verifications/`, and `state/` lifecycle. The skill governs the mathematical discipline inside a work unit; ProofRelay governs how that work is claimed, audited, and preserved on GitHub.
+## Usage modes
+
+These two modes are distinct. **Skill-only is the default.**
+
+| Mode | When it applies | What happens |
+|---|---|---|
+| Skill only | Default for any prove/disprove/audit request, in any workspace. | The agent follows `SKILL.md`, writes local `math/<run>/` artifacts, and reports verdicts. No GitHub protocol is involved. |
+| Repository collaboration + skill | Only when the user explicitly asks to use ProofRelay / repository collaboration. | The skill's artifacts map onto the repository lifecycle: frozen theorem → task Issue, proofs → `attempts/` branches and PRs, verification → independent `verifications/` PR, status → ledger updates. The two align by design: the skill governs mathematical discipline inside a work unit; ProofRelay governs how that work is claimed, audited, and preserved on GitHub. |
+
+Do not couple the modes by default: installing or triggering `math-theorem` never implies creating Issues, branches, or pull requests, and ProofRelay work never implies the skill unless requested.
 
 ## Installation
 

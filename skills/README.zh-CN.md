@@ -2,7 +2,7 @@
 
 [English](README.md)
 
-本目录随模板附带可安装的 [Agent Skills](https://github.com/anthropics/skills)，与 ProofRelay 协议配套使用。每个 skill 是一个自包含目录，以 `SKILL.md` 为入口；仓库本身不引入任何运行时依赖。
+本目录随模板附带可安装的 [Agent Skills](https://github.com/anthropics/skills)。每个 skill 是一个自包含目录，以 `SKILL.md` 为入口，**可独立使用**；与 ProofRelay 协议配合是可选行为，不是默认。仓库本身不引入任何运行时依赖。
 
 ## 内置 skill
 
@@ -10,7 +10,16 @@
 |---|---|
 | [`math-theorem/`](math-theorem/SKILL.md) | 研究级定理发现、证明、证伪、最小前提修复与新颖性认证。强制冻结命题、隔离证明实例、新上下文验缝、既有工作占位审计，并对"命题为真""证明完整""结论新颖"分开裁决。 |
 
-`math-theorem` 与 ProofRelay 刻意对齐：它的运行工件（冻结命题、路线注册表、引理账、溯源记录、裁决书）对应本仓库的 `contracts/`、`routes/`、`attempts/`、`verifications/` 与 `state/` 生命周期。skill 负责工作单元内部的数学纪律，ProofRelay 负责这些工作在 GitHub 上如何被主张、审计和保全。
+## 使用模式
+
+以下两种模式是相互区分的，**默认只用 skill**：
+
+| 模式 | 适用条件 | 行为 |
+|---|---|---|
+| 只触发 skill | 默认。任何工作区里的证明/反驳/审计请求都走这个模式。 | agent 按 `SKILL.md` 执行，在本地产出 `math/<运行目录>/` 工件并给出裁决，不涉及 GitHub 协作协议。 |
+| 仓库协作 + skill | 仅当用户**明确说明**要使用 ProofRelay / 仓库协作时。 | skill 工件映射到仓库生命周期：冻结命题 → 任务 Issue，证明 → `attempts/` 分支与 PR，验证 → 独立 `verifications/` PR，状态 → 台账更新。两者设计上天然对齐：skill 负责工作单元内部的数学纪律，ProofRelay 负责工作在 GitHub 上如何被主张、审计和保全。 |
+
+默认不耦合：安装或触发 `math-theorem` 不意味着要建 Issue、分支或 PR；反过来，ProofRelay 流程也不意味着必须用该 skill，除非用户要求。
 
 ## 安装方式
 

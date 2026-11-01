@@ -1,0 +1,17 @@
+# Optional build-only example, adapted from leanprover/lean-action README (Apache-2.0).
+# Copy only after reviewing existing CI, project root, permissions and default branch.
+# This is NOT a sorry-free, semantic-correctness or human-readability certificate.
+name: Lean build
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          build: "true"

@@ -9,6 +9,7 @@
 | Skill | 用途 |
 |---|---|
 | [`math-theorem/`](math-theorem/SKILL.md) | 研究级定理发现、证明、证伪、最小前提修复与新颖性认证。强制冻结命题、隔离证明实例、新上下文验缝、既有工作占位审计，并对"命题为真""证明完整""结论新颖"分开裁决。 |
+| [`eulerleanpro/`](eulerleanpro/SKILL.md) | 重大数学成果的独立 Lean 4 形式化 Skill：人类可读数学说明、形式化路线图、真实证明依赖 DAG，以及按需 GitHub/Blueprint 协作。参见[说明](eulerleanpro/README.md)。 |
 
 ## 使用模式
 

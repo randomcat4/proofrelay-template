@@ -9,6 +9,7 @@ This directory ships installable [Agent Skills](https://github.com/anthropics/sk
 | Skill | Purpose |
 |---|---|
 | [`math-theorem/`](math-theorem/SKILL.md) | Research-grade theorem discovery, proving, refutation, minimal-assumption repair, and novelty certification. Enforces frozen statements, isolated proof instances, fresh-context verification, prior-art auditing, and separate verdicts for truth, proof completeness, and novelty. |
+| [`eulerleanpro/`](eulerleanpro/SKILL.md) | Independent major-result Lean 4 formalization skill, with human-readable mathematics, a formalization roadmap, a real proof-dependency DAG, and GitHub/Blueprint collaboration. See its [README](eulerleanpro/README.md). |
 
 ## Usage modes
 

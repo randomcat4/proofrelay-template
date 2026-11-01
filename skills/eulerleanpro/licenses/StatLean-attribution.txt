@@ -1,0 +1,9 @@
+StatLean/Stat-Lean upstream attribution
+
+Copyright 2024 Junwei Lu
+
+This copyright notice appears in the upstream LICENSE appendix.
+Source: https://github.com/StatLean/Stat-Lean/blob/main/LICENSE
+The adapted website-authoring guidance in eulerleanpro is attributed in SOURCES.md.
+The Apache License, Version 2.0 is included in Apache-2.0.txt.
+This is a package attribution note, not a claim that upstream published a NOTICE file.
